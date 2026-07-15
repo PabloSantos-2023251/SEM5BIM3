@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import { Cliente } from '../models/cliente.js';
 
-const FILE_PATH = './clientes.json';
+const FILE_PATH = './src/data/clientes.json';
 
 export async function leerClientes(): Promise<Cliente[]> {
   try {

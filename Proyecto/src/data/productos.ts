@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises';
 import { Producto } from '../models/producto.js';
 
-const FILE_PATH = './productos.json';
+const FILE_PATH = './src/data/productos.json';
 
 export async function leerProductos(): Promise<Producto[]> {
   try {

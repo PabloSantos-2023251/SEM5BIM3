@@ -1,8 +1,10 @@
-import { MenuPrincipal } from './menu/menu';
+import "./api/server.js";
 
-async function main() {
-  const menu = new MenuPrincipal();
-  await menu.mostrar();
-}
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Promesa rechazada no manejada:", promise, "Razón:", reason);
+});
 
-main();
+process.on("uncaughtException", (error) => {
+  console.error("Excepción no capturada:", error);
+  process.exit(1);
+});
